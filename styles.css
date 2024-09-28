@@ -32,6 +32,7 @@ a {
 
 a:hover {
     color: #d850ff;
+    text-decoration: underline;
 }
 
 /* Кнопка */
@@ -191,7 +192,7 @@ button:hover {
     color: #fff;
     padding: 1em 0;
     text-align: center;
-    margin-top: auto; /* Это прикрепит футер внизу */
+    margin-top: auto;
     width: 100%;
 }
 
@@ -228,7 +229,7 @@ button:hover {
     }
 
     .header__logo-image {
-        margin-bottom: 1em; /* Добавлен отступ снизу логотипа */
+        margin-bottom: 1em;
     }
 
     .header__nav-list {
@@ -279,7 +280,7 @@ button:hover {
     }
 }
 
-/* Красивое оформление пунктов перечисления */
+/* Пункты перечисления */
 .section__list {
     list-style: none;
     padding: 0;
