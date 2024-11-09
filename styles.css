@@ -88,13 +88,32 @@ button:hover {
     margin-left: 20px;
 }
 
+/* Inactive menu state */
 .header__nav-link {
-    color: #ffffff;
+    color: white;
     text-decoration: none;
     font-size: 1em;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
+/* Active menu state */
+.header__nav-link.active {
+    background-color: #d850ff;
+    color: white;
+}
+
+/* Hover menu state */
 .header__nav-link:hover {
+    background-color: #000000;
+    color: #d850ff;
+}
+
+/* Active and hover menu state */
+.header__nav-link:active {
+    background-color: #ffffff;
     color: #d850ff;
 }
 
@@ -194,6 +213,10 @@ button:hover {
     text-align: center;
     margin-top: auto;
     width: 100%;
+}
+
+.footer__text {
+    margin: 5px 0;
 }
 
 .footer__list {
@@ -317,12 +340,6 @@ button:hover {
     box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
 }
 
-.portfolio__image {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
 .portfolio__caption {
     font-size: 1.2em;
     margin: 0.5em 0;
@@ -373,4 +390,170 @@ button:hover {
 
 .row:nth-child(odd) .cell {
     background-color: #fff;
+}
+
+/* Таблица-конструктор */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form__label {
+    font-weight: bold;
+}
+
+.form__select,
+.form__input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form__button {
+    padding: 10px 20px;
+    background-color: #d850ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.form__button:hover {
+    background-color: #d850ff;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: 8px;
+    text-align: center;
+    color: black;
+}
+
+.table th {
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #ddd;
+}
+
+.table td {
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Комментарии */
+#comments-preloader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+/* Стили для ошибок */
+.error {
+    color: #ff2c2c;
+}
+
+.loading-indicator {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.loading-indicator::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid;
+    border-color: #d850ff transparent;
+    animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Галерея-свайпы */
+
+#hero {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.swiper-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0;
+}
+
+.swiper-slide-image {
+    display: block;
+    width: 60%;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+}
+
+.swiper-slide-image::before,
+.swiper-slide-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.swiper-slide-image::before {
+    left: 0;
+    width: 25%;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.swiper-slide-image::after {
+    right: 0;
+    width: 25%;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+
+}
+
+.swiper-button-next::after{
+    display: none;
+}
+
+.swiper-button-prev::after {
+    display: none;
+}
+
+.swiper-button-prev {
+    left: 20px;
+}
+
+.swiper-button-next {
+    right: 20px;
+}
+
+.swiper-button-next img, .swiper-button-prev img {
+    width: 30px;
+    height: auto;
+}
+
+.swiper-pagination-bullet {
+    background-color: #d850ff;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    display: none;
 }
